@@ -137,3 +137,8 @@ However, the documentation requests that commercial reuse of the source code be 
 Original rights remain with the respective authors.
 
 This repository exists for historical preservation and research purposes.
+
+## Related Projects
+
+PLAY3 Archive  
+https://github.com/gikonekos/PLAY3-Archive
