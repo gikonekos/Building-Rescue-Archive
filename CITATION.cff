@@ -1,0 +1,24 @@
+```cff
+cff-version: 1.2.0
+title: "Building Rescue Archive"
+message: "If you use this archive in research or documentation, please cite it as follows."
+type: software
+authors:
+  - family-names: Motoi
+    given-names: Kenkichi
+    alias: gikonekos
+repository-code: "https://github.com/gikonekos/Building-Rescue-Archive"
+license: MIT
+keywords:
+  - pocket computer
+  - SHARP PC-E500
+  - SHARP PC-E550
+  - software preservation
+  - retro computing
+  - assembly
+abstract: >
+  Historical preservation archive of the game "Building Rescue"
+  for the SHARP PC-E500 / PC-E550 pocket computer series.
+  The repository preserves original assembly source code,
+  binaries, and documentation related to the software.
+```
