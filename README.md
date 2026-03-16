@@ -5,6 +5,9 @@ Archive of Building Rescue, an action game for the SHARP PC-E500 series pocket c
 
 This repository preserves the original source code, binary, and documentation for the game, along with historical notes and a gameplay demonstration.
 
+A pseudo **4-level grayscale LCD technique** discovered during development
+is **demonstrated** in **the ending sequence**.
+
 ---
 
 ## About
