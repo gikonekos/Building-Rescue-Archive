@@ -1,3 +1,4 @@
+[![GitHub release](https://img.shields.io/github/v/release/gikonekos/Building-Rescue-Archive)](https://github.com/gikonekos/Building-Rescue-Archive/releases)
 # Building Rescue Archive
 
 Archive of Building Rescue, an action game for the SHARP PC-E500 series pocket computers.
@@ -129,6 +130,23 @@ According to the included documentation (2008 archive notes), the author permits
 - redistribution
 
 However, the documentation requests that commercial reuse of the source code be reported to the original author.
+
+The original documentation from the 1994 archive and the later Vector
+distribution notes are preserved in the included text files.
+
+---
+
+## Development History
+
+The original version of **Building Rescue** was first released on the BBS  
+service **Pocket Communication** operated by Kogakusha.
+
+A simplified version of the game, titled **"Building Rescue Version 1.1 (mini)"**,  
+was later published in **Pocket Computer Journal**, September 1994 issue.
+
+Authors:
+- Kenkichi Motoi
+- GAME Shokunin
 
 ---
 
