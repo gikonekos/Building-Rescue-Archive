@@ -47,7 +47,6 @@ Required environment:
 ---
 
 ## Files
-## Files
 
 This repository contains the following materials.
 
