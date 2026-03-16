@@ -57,7 +57,7 @@ Required environment:
 
 This repository contains the following materials.
 
-- **BR.asm** — UTF-8 converted XASM assembler source code (readable on modern systems)
+- **BR_UTF8.asm** — UTF-8 converted XASM assembler source code (readable on modern systems)
 - **BR_original.asm** — original source file preserved as distributed
 - **BR.OBJ** — assembled game object file
 - **BR110.TXT** — later archive documentation (2008 distribution notes)
