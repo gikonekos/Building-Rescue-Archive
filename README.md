@@ -138,6 +138,8 @@ distribution notes are preserved in the included text files.
 
 ## Development History
 
+Original version released July 7, 1994.
+
 The original version of **Building Rescue** was first released on the BBS  
 service **Pocket Communication** operated by Kogakusha.
 
@@ -155,6 +157,16 @@ Authors:
 Original rights remain with the respective authors.
 
 This repository exists for historical preservation and research purposes.
+
+## Related Material
+
+![PJ Plaza comic](docs/pj_plaza_comic.png)
+
+The character "Mizuho Senpai", who appears in this game,
+originally appeared in a small comic drawn by the author
+for the "PJ Plaza" section of *Pocket Computer Journal*.
+
+PJ Plaza comic drawn by the author for Pocket Computer Journal.
 
 ## Related Projects
 
