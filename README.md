@@ -6,7 +6,7 @@ Archive of Building Rescue, an action game for the SHARP PC-E500 series pocket c
 This repository preserves the original source code, binary, and documentation for the game, along with historical notes and a gameplay demonstration.
 
 A pseudo **4-level grayscale LCD technique** discovered during development
-is **demonstrated** in **the ending sequence**.
+is **demonstrated** in **Opening Title** and **the ending sequence**.
 
 ---
 
@@ -47,14 +47,16 @@ Required environment:
 ---
 
 ## Files
+## Files
 
-This repository contains the following original materials.
+This repository contains the following materials.
 
-- BR.ASM — original XASM assembler source code
-- BR.OBJ — assembled game object file
-- BR110.TXT — later archive documentation (2008 distribution notes)
-- BR.INF — original information file
-- BRINF.TXT — Vector distribution header
+- **BR.asm** — UTF-8 converted XASM assembler source code (readable on modern systems)
+- **BR_original.asm** — original source file preserved as distributed
+- **BR.OBJ** — assembled game object file
+- **BR110.TXT** — later archive documentation (2008 distribution notes)
+- **BR.INF** — original information file
+- **BRINF.TXT** — Vector distribution header
 
 These files are preserved as part of a historical software archive.
 
