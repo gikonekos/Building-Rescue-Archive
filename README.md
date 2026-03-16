@@ -25,6 +25,8 @@ According to the included documentation, the game features:
 
 If SCC hardware is not connected, the game can also use the built-in BEEP sound.
 
+Inspired by the arcade game Crazy Climber.
+
 ---
 
 ## Platform
