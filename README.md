@@ -58,6 +58,8 @@ This repository contains the following original materials.
 
 These files are preserved as part of a historical software archive.
 
+Source code assembled with **XASM**.
+
 ---
 
 ## Running
