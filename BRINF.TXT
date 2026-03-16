@@ -1,0 +1,21 @@
+E500/GAME/BR110.LZH/ﾋﾞﾙﾃﾞｨﾝｸﾞﾚｽｷｭｰ
+--------------------------------------------------------------------------
+【 タイトル 】 ビルディングレスキュー(Building Rescue)ソースファイル
+【 ファイル 】 BR110.LZH
+【  制作者  】 ポケット通信Ｖｅｒ．３　＃１３５７　芸夢　職人
+               ポケット通信Ｖｅｒ．３　＃２４００　基　建吉
+
+    　　　    Game Design,Scenario,Musics,Graphics,Testplay,Debug,SubProgram
+               ポケット通信Ｖｅｒ．３　＃２４００  基　建吉
+              Program,Debug,Testplay
+               ポケット通信Ｖｅｒ．３　＃１３５７　芸夢　職人
+ (C)1994-2008 BUGSOFT (MOTOI Kenkichi & GAME Shokunin) All Rights Reseved.
+【 対応機種 】 PC-E500シリーズ（ＳＣＣ対応）
+【 動作確認 】 ＰＣ－Ｅ５５０(Rom Version 7.5)
+【 転載可否 】 条件付で可 
+               GPLv3 http://ja.wikipedia.org/wiki/GNU_General_Public_License
+【  掲載先  】 VECTOR
+               http://www.vector.co.jp/
+--------------------------------------------------------------------------
+Σ:)＜基　建吉が個人的に転載するものです。アーカイブの内容
+　　　変更しないで再配布してください。
