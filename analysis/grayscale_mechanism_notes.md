@@ -157,3 +157,19 @@ The key mechanism is the repeated display sequence:
     CALL VRAM2
 
 This is sufficient to create four visible brightness levels on a monochrome LCD.
+## Important clarification
+
+The pseudo 4-level grayscale mechanism described here is **not used for normal gameplay rendering**.
+
+Current understanding:
+
+- In-game graphics are rendered in **monochrome** using sprite and tile routines.
+- The pseudo grayscale technique is used only for **demonstration screens**
+  such as title screens, clear screens, or ending-related bitmap displays.
+
+The effect appears to be produced by alternating two VRAM planes
+(e.g., VRAM1 and VRAM2) with time-weighted display.
+
+Therefore the grayscale system should be considered a **presentation
+technique for static demo graphics**, not the primary game rendering mode.
+
