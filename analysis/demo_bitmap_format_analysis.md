@@ -213,14 +213,31 @@ Current best model:
 6. time weighting produces the grayscale-like effect on demo screens
 
 
-## 12 What Still Needs Investigation
+## 12 Additional layout clarification
 
-The following points are still worth checking:
+`DTITG` and `DTITH` write to the same base regions later used by
+`VRAMPP` and `VRAMPP2`, respectively:
 
-- exact meaning of the 32-byte destination stride in `DGSUB`
-- how the 640-byte expanded bitmap relates to the 768-byte `VRAMSS` display region
-- whether the remaining bytes in each plane are padding, workspace, or another control area
+- `DTITG`  -> `VRAM1+192+8`
+- `VRAMPP` -> `VRAM1+192+8`
 
+- `DTITH`  -> `VRAM2+8`
+- `VRAMPP2` -> `VRAM2+8`
+
+`DGSUB` copies 160 bytes and then advances the destination by 32 bytes,
+repeating this four times.
+
+So the destination layout is best understood as four 192-byte blocks, each
+containing:
+
+- 160 bytes of image data
+- 32 bytes of padding or non-image space
+
+This matches the 768-byte source span consumed by `VRAMSS`.
+
+However, the exact end-of-buffer relationship on the `VRAM2` side should still
+be treated with care, because `VRAMPP2` starts at `VRAM2+8` and the later
+contiguous symbols (`QTBL`, `WTBL`) are involved in that region.
 
 ## 13 Conclusion
 
