@@ -15,6 +15,7 @@ Relevant symbols:
 - `TITC2`
 - `DTITG`
 - `DTITH`
+- `DGSUB`
 - `VRAMPP`
 - `VRAMPP2`
 - `VRAMSS`
@@ -39,87 +40,136 @@ VRAM planes
 ↓
 LCD
 
-This strongly suggests that the pseudo-grayscale demo screens are built from
-two separate bitmap planes.
+This is no longer just a hypothesis. The source directly shows that the two
+bitmap-expansion routines write to different VRAM regions.
 
 
 ## 2 Confirmed Demo Data Blocks
 
 The source contains large bitmap-like data blocks such as:
 
-- `TITG`   ; title image
-- `TITH`   ; title frame
-- `TITC1`  ; clear / ending-related image 1
-- `TITC2`  ; clear / ending-related image 2
+- `TITG`   ; title image 1
+- `TITH`   ; title image 2
+- `TITC1`
+- `TITC2`
 
-These blocks contain raw byte sequences that clearly behave like packed
-bitmap data rather than symbolic stage-map data.
-
-
-## 3 Header Format
-
-These bitmap data blocks begin with:
+These blocks contain dense packed byte patterns and begin with:
 
     DB 0A0H,004H
 
-This is very likely a small image-format header.
-
-At minimum it strongly suggests that the data is not ordinary sprite data,
-but tool-generated image data with explicit dimensions or block structure.
+They are clearly bitmap-style data rather than stage-map or sprite tables.
 
 
-## 4 Why These Look Like Converted VRAM Data
+## 3 DTITG and DTITH
 
-The byte patterns in `TITG`, `TITH`, `TITC1`, and `TITC2` look like dense
-bit patterns, for example:
+The source defines:
 
-    0FEH,002H,002H,0F2H,0F2H,002H,006H,0F8H
+    DTITG:
+        MV X,VRAM1+192+8
+        CALLF DGSUB
+        RETF
 
-Such values are consistent with packed bitmap rows and inconsistent with
-nibble map or gameplay object tables.
+    DTITH:
+        MV X,VRAM2+8
+        CALLF DGSUB
+        RETF
 
-This matches the known development workflow:
+This directly confirms that:
 
-- graphics drawn on PC-9801
-- converted by `GVR2LCD.EXE`
-- emitted as assembler text
+- `DTITG` expands data into the VRAM1-side buffer
+- `DTITH` expands data into the VRAM2-side buffer
+
+So the two routines differ by destination buffer, not by copy logic.
 
 
-## 5 Role of DTITG and DTITH
+## 4 Common Copy Routine: DGSUB
 
-The main program uses:
+Both routines call the same helper:
+
+    DGSUB
+
+Its structure is:
+
+- copy 160 bytes
+- advance destination by 32 bytes
+- repeat
+- total of 4 copy blocks
+
+The code is effectively:
+
+    copy 160 bytes
+    Y += 160
+    X += 32
+
+repeated three times, then a final copy.
+
+
+## 5 Total Transfer Size
+
+`DGSUB` copies:
+
+    160 bytes × 4 = 640 bytes
+
+So each demo-image block contributes 640 bytes of plane data.
+
+
+## 6 What the Header Means
+
+The bitmap data begins with:
+
+    DB 0A0H,004H
+
+This now fits very naturally with the copy routine:
+
+- `0A0H` = 160 bytes
+- `04H`  = 4 blocks
+
+That matches exactly what `DGSUB` does.
+
+So the header is very likely:
+
+    width_in_bytes = 160
+    block_count    = 4
+
+
+## 7 Memory Layout Meaning
+
+Since `DGSUB` copies 160 bytes and then advances destination by only 32 bytes,
+the source and destination layouts are different.
+
+This strongly suggests:
+
+- source data is stored as converted packed bitmap blocks
+- destination VRAM uses an internal layout optimized for later display
+- `DGSUB` is already doing one stage of layout conversion
+
+
+## 8 Confirmed Plane Split
+
+At startup:
 
     MV Y,TITG
     CALLF DTITG
     MV Y,TITH
     CALLF DTITH
 
-and later in the ending:
+At ending:
 
     MV Y,TITC1
     CALLF DTITG
     MV Y,TITC2
     CALLF DTITH
 
-This strongly suggests:
+This confirms the structural pairing:
 
-- `DTITG` and `DTITH` are not just "title-specific" routines
-- they are two generic bitmap-expansion routines
-- each one writes into a different display buffer / plane
+- `TITG` / `TITC1` go through `DTITG` into the VRAM1-side destination
+- `TITH` / `TITC2` go through `DTITH` into the VRAM2-side destination
 
-
-## 6 Best Current Interpretation
-
-The most likely interpretation is:
-
-- `DTITG` expands one bitmap plane into one internal VRAM region
-- `DTITH` expands another bitmap plane into a second internal VRAM region
-
-In other words, the title and ending images are composed of two separately
-stored bitmap sources.
+So title and ending demo images are explicitly stored as two separate data
+sets and expanded into two separate display buffers.
 
 
-## 7 Relation to Pseudo Grayscale
+## 9 Relation to Pseudo Grayscale
 
 The title loop is:
 
@@ -136,86 +186,49 @@ The ending loop is:
     CALLF VRAMPP2
     ...
 
-Since `VRAMPP` and `VRAMPP2` select different source regions, the most natural
-interpretation is:
-
-- plane 1 = image expanded by one bitmap routine
-- plane 2 = image expanded by the other bitmap routine
-
-The visible grayscale-like effect is then produced by showing the two planes
-with different time weights.
+Since `VRAMPP` and `VRAMPP2` read from different VRAM regions, and `DTITG`
+and `DTITH` write into different VRAM regions, the pseudo-grayscale mechanism
+is now strongly supported as a two-plane demo display system.
 
 
-## 8 Why Two Separate Input Images Make Sense
+## 10 Important Clarification
 
-This also matches the known cross-development workflow.
+This two-plane bitmap path is used for demo screens such as:
 
-Because the graphics were drawn on PC-9801 as two-plane graphics, it is
-natural that the converted output would preserve that separation.
+- title
+- ending
 
-So the likely production path was:
-
-PC-9801 plane A
-↓
-converted to assembler text
-↓
-loaded by `DTITG`
-
-PC-9801 plane B
-↓
-converted to assembler text
-↓
-loaded by `DTITH`
+Normal gameplay and stage clear rendering remain monochrome.
 
 
-## 9 Difference From Gameplay Graphics
-
-This is fundamentally different from the normal gameplay display path.
-
-Gameplay uses:
-
-- stage map lookup
-- sprite draw / erase
-- monochrome rendering
-- `VRAMPP` only
-
-The demo path instead uses:
-
-- large prebuilt bitmap data
-- explicit expansion routines
-- both `VRAMPP` and `VRAMPP2`
-- pseudo-grayscale presentation
-
-
-## 10 Most Likely Structural Model
+## 11 Best Current Model
 
 Current best model:
 
-1. `TITG` / `TITC1` contain bitmap plane A
-2. `TITH` / `TITC2` contain bitmap plane B
-3. `DTITG` expands plane A into one demo VRAM area
-4. `DTITH` expands plane B into another demo VRAM area
-5. `VRAMPP` and `VRAMPP2` alternately display those planes
-6. time weighting creates the 4-level grayscale-like effect
+1. `TITG` / `TITC1` contain plane-A demo bitmap data
+2. `TITH` / `TITC2` contain plane-B demo bitmap data
+3. `DTITG` expands plane A into a VRAM1-side region
+4. `DTITH` expands plane B into a VRAM2-side region
+5. `VRAMPP` and `VRAMPP2` alternately display those regions
+6. time weighting produces the grayscale-like effect on demo screens
 
 
-## 11 What Still Needs Direct Confirmation
+## 12 What Still Needs Investigation
 
-The following points should still be verified directly from the code:
+The following points are still worth checking:
 
-- exact destination addresses written by `DTITG`
-- exact destination addresses written by `DTITH`
-- whether the two routines differ only by destination buffer
-- whether the `0A0H,004H` header encodes dimensions, block count, or both
+- exact meaning of the 32-byte destination stride in `DGSUB`
+- how the 640-byte expanded bitmap relates to the 768-byte `VRAMSS` display region
+- whether the remaining bytes in each plane are padding, workspace, or another control area
 
 
-## 12 Conclusion
+## 13 Conclusion
 
-The title and ending demo screens in Building Rescue are most likely built
-from two separate bitmap planes.
+The source directly confirms that `DTITG` and `DTITH` expand separate bitmap
+data blocks into separate VRAM regions.
 
-Those planes appear to be stored as converted PC-9801 VRAM-derived data and
-expanded through `DTITG` and `DTITH` into separate display buffers.
+This means the title and ending demo screens are indeed built from two
+independent bitmap planes, not from a single monochrome image.
 
-The pseudo-grayscale effect is then produced by time-weighted display of
-those two buffers through `VRAMPP` and `VRAMPP2`.
+The pseudo-grayscale effect is therefore grounded in an actual two-plane
+bitmap format and not merely a speculative display trick.
