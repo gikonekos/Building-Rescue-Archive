@@ -171,5 +171,8 @@ simultaneously running music and sound effects.
 Such a design is unusually sophisticated for a pocket computer game.
 
 Note: the pseudo grayscale mechanism documented in
-`grayscale_mechanism_notes.md` is used only for demo screens
-(title / ending) and not for normal gameplay rendering.
+`grayscale_mechanism_notes.md` is used only for demonstration screens
+such as the title and ending sequences.
+
+Normal gameplay and stage clear screens use standard monochrome
+rendering for performance and clarity.
