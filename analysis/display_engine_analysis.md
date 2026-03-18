@@ -170,6 +170,27 @@ simultaneously running music and sound effects.
 
 Such a design is unusually sophisticated for a pocket computer game.
 
+## Clarified display-path split
+
+Current evidence suggests that Building Rescue uses at least two distinct
+display paths.
+
+1. Normal gameplay path
+   - monochrome rendering
+   - map lookup through `VMAP1..4` and `FADR`
+   - sprite drawing through routines such as `GPRTV1` and `GDELV1`
+
+2. Demo bitmap path
+   - used for title and ending presentation
+   - bitmap data such as `TITG` / `TITH`
+   - display through `VRAMPP`, `VRAMPP2`, and `VRAMSS`
+   - pseudo grayscale by time-weighted plane display
+
+Stage clear screens should currently be treated as monochrome based on
+observed real-machine behavior.
+
+---
+
 Note: the pseudo grayscale mechanism documented in
 `grayscale_mechanism_notes.md` is used only for demonstration screens
 such as the title and ending sequences.
