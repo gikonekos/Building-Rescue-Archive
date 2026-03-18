@@ -189,6 +189,22 @@ display paths.
 Stage clear screens should currently be treated as monochrome based on
 observed real-machine behavior.
 
+The routine TRIG0 appears at the end of the title display loop.
+
+Its likely role is to stabilize the display cycle and prevent the loop from
+running at full CPU speed. This routine probably combines keyboard polling
+with a small delay.
+
+Further disassembly is required to determine whether TRIG0 also interacts
+with LCD timing or hardware status registers.The routine TRIG0 appears at the end of the title display loop.
+
+Its likely role is to stabilize the display cycle and prevent the loop from
+running at full CPU speed. This routine probably combines keyboard polling
+with a small delay.
+
+Further disassembly is required to determine whether TRIG0 also interacts
+with LCD timing or hardware status registers.
+
 ---
 
 Note: the pseudo grayscale mechanism documented in
