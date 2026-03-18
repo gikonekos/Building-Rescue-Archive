@@ -205,6 +205,37 @@ with a small delay.
 Further disassembly is required to determine whether TRIG0 also interacts
 with LCD timing or hardware status registers.
 
+## Difference between title and ending demo timing
+
+Although both the title and ending use the two-plane demo display path,
+their scheduling is not identical.
+
+Title loop:
+
+    VRAMPP
+    VRAMPP
+    VRAMPP2
+    TRIG0
+
+This is a clean fixed-ratio display loop.
+
+Ending loop:
+
+    VRAMPP
+    MPLAY
+    VRAMPP2
+    TRIG0
+
+So the ending mixes sound playback into the display cycle.
+
+This likely changes both:
+
+- the effective grayscale timing
+- the apparent music tempo
+
+As a result, the title demo and ending demo should be treated as related
+but not identical grayscale presentations.
+
 ---
 
 Note: the pseudo grayscale mechanism documented in
