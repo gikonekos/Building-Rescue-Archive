@@ -169,3 +169,7 @@ This allows a monochrome LCD to simulate four brightness levels while
 simultaneously running music and sound effects.
 
 Such a design is unusually sophisticated for a pocket computer game.
+
+Note: the pseudo grayscale mechanism documented in
+`grayscale_mechanism_notes.md` is used only for demo screens
+(title / ending) and not for normal gameplay rendering.
