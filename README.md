@@ -121,6 +121,18 @@ GAME Shokunin
 - debugging
 - test play
 
+## Contact
+
+For questions or historical information about the game:
+
+Motoi Kenkichi  
+https://x.com/qptn/
+
+Geimu Shokunin  
+https://x.com/k2PSyIqxDKciBXA
+
+You may also open an **Issue** in this repository.
+
 ---
 
 ## Historical Context
