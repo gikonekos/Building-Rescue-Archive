@@ -1,39 +1,31 @@
 # Build Directory
 
-This directory contains reconstructed build outputs for the project.
-
----
+This directory contains reconstructed build outputs and verification data for the project.
 
 ## Purpose
 
-- Store files generated during modern reconstruction
-- Keep original sources untouched
-- Enable reproducible builds and verification
-
----
+- Store files generated during reconstruction
+- Keep original source preservation separate from generated artifacts
+- Enable reproducible builds and byte-level verification
 
 ## Structure
-```
+
 build/
-  └─ xasm140/ - XASM 1.40 build outputs and verification data
-```
----
+  └─ xasm140/ - XASM 1.40 reference and reconstruction files
 
 ## Role in this Project
 
 This directory is used to:
 
-- Reproduce the original binary from source
-- Compare reconstructed builds with the original release
-- Verify byte-level identity
+- reproduce the original binary from source
+- compare reconstructed builds with the original release
+- preserve the verification process
 
-The original program data is preserved in `/br110/`.  
-All files here are derived artifacts.
-
----
+The original archived program files are preserved separately in `/br110/`.
+Files in this directory are build and verification artifacts.
 
 ## Notes
 
-- Files in this directory are generated artifacts
-- They may change during reconstruction work
-- Original source files are never modified here
+- Files here may be added as verification progresses
+- Original source preservation is not performed in this directory
+- Exact-match reconstruction results are documented under `build/xasm140/`
