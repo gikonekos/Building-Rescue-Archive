@@ -219,12 +219,33 @@ This repository exists for **historical preservation and research purposes**.
 
 ---
 
+### XASM140 Original License (English)
+
+This program is distributed as freeware.  
+Copyright is retained by Eiji Kako and Shigeto Kon.
+
+Redistribution and re-publication are permitted, provided that:
+- the program is not modified,
+- it is not used for commercial purposes, and
+- the authors’ rights are not infringed.
+
+As long as these conditions are met, the program may be freely distributed and shared.
+
+Support is provided via the website:  
+http://www.kako.com/
+
+Useful sample code and related materials are available there.
+
+Finally, we would like to express our gratitude to the original author, Shigeto Kon,  
+for granting permission to modify and publish the source code and documentation.  
+Thank you very much.
+
 ### XASM140 Original License (Japanese)
 
 このプログラムはフリーウェアです。著作権は加古英児および近成人が保持します。  
 配布や転載は、改変せずに、営利を目的とせずに、作者の持つ著作上の権利を侵害しないようにしてもらえれば、あとは自由に配布転載して結構です。
 
-インターネットのWWWのページ(http://www.kako.com/)にてサポートを行います。  
+インターネットのWWWのページ( http://www.kako.com/ )にてサポートを行います。  
 役に立つサンプルのコードなどを用意しております。
 
 最後になりましたが、原作者の近成人氏には原作のソースとドキュメントに手を加え発表することを許可いただきました。どうもありがとうございました。
