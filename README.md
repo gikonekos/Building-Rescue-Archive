@@ -214,3 +214,31 @@ The character **“Mizuho Senpai”**, who appears in this game, originally appe
 
 PLAY3 Archive  
 https://github.com/gikonekos/PLAY3-Archive
+
+---
+
+## License
+
+This project is based on the original software *Building Rescue* (1994).
+
+The original program is distributed under the following freeware terms:
+
+### Original License (Japanese)
+
+このプログラムはフリーウェアです。著作権は加古英児および近成人が保持します。  
+配布や転載は、改変せずに、営利を目的とせずに、作者の持つ著作上の権利を侵害しないようにしてもらえれば、あとは自由に配布転載して結構です。
+
+インターネットのWWWのページ(http://www.kako.com/)にてサポートを行います。  
+役に立つサンプルのコードなどを用意しております。
+
+最後になりましたが、原作者の近成人氏には原作のソースとドキュメントに手を加え発表することを許可いただきました。どうもありがとうございました。
+
+### Notes
+
+- Copyright is retained by the original authors
+- Redistribution is permitted if:
+  - no modification is made
+  - it is not used for commercial purposes
+  - the authors' rights are not infringed
+
+This repository preserves the original work and provides reconstruction and analysis for archival purposes.
