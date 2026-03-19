@@ -72,6 +72,9 @@ Original program data and source files:
 - BR.INF / BRINF.TXT — original distribution metadata  
 - BR110.TXT — later archive notes (2008)
 - br110.zip - orignai archive
+
+The original distribution format was LZH; however, only the later ZIP archive (Vector distribution) is currently available and preserved here.
+  
 ## docs/
 
 Documentation and reference materials:
