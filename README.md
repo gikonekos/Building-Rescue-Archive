@@ -18,7 +18,7 @@ The slow response of early **STN LCD panels** blends these rapidly alternating f
 
 Example captured from **real hardware (PC-E550)**.
 
-![PC-E500 pseudo grayscale title screen](docs/OpeningDemo.jpg)
+![PC-E500 pseudo grayscale title screen](docs/images/OpeningDemo.jpg)
 
 ---
 
@@ -81,8 +81,8 @@ Documentation and reference materials:
 
 - BR110-manual_ja.md / en.md — game manual  
 - BR-inf_ja.md / en.md — original information text  
-- OpeningDemo.jpg — real hardware capture  
-- pj_plaza_comic.png — related comic material  
+- images/OpeningDemo.jpg — real hardware capture  
+- images/pj_plaza_comic.png — related comic material  
 
 ## analysis/
 
@@ -231,7 +231,7 @@ Authors:
 
 # Related Material
 
-![PJ Plaza comic](docs/pj_plaza_comic.png)
+![PJ Plaza comic](docs/images/pj_plaza_comic.png)
 
 The character **“Mizuho Senpai”**, who appears in this game, originally appeared in a small comic drawn by the author for the **“PJ Plaza”** section of *Pocket Computer Journal*.
 
