@@ -1,3 +1,5 @@
+```
+ 
  E500/GAME/BR10.LZH/Building Rescue
 --------------------------------------------------------------------------
 [ Title ] Building Rescue
@@ -74,3 +76,6 @@ If you have any impressions, opinions, or requests, please contact us.
 PS2.
 
 Special thanks to Mr. M's for creating the 16-color graphics converter for PC-98.
+
+
+```
