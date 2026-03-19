@@ -27,7 +27,7 @@ Examples include:
 However, when tested on real hardware, some of these addresses did not behave
 as described.
 
-Therefore the addresses were verified against the archived binary.
+Therefore, the addresses were verified against the archived binary.
 
 
 # 2 Binary Used
@@ -39,6 +39,11 @@ The verification was performed using the archived object file:
 The runtime base address of the program is:
 
     &BB000
+
+Note:
+
+The object file includes a header, so offsets in the file do not directly
+correspond to runtime addresses.
 
 
 # 3 Patch Address Verification
@@ -70,26 +75,7 @@ Result:
 This address matches the binary and the patch appears valid.
 
 
-# 5 DELTA Detection Patch
-
-Printed patch:
-
-    POKE &BB92F,00
-
-Expected original value:
-
-    01
-
-Actual binary value:
-
-    34
-
-Result:
-
-This address does not match the archived binary.
-
-
-# 6 Secondary Sound Patch
+# 5 Secondary Sound Patch
 
 Printed patch:
 
@@ -109,13 +95,35 @@ The value does not match the printed description.
 
 This suggests either:
 
-- a typo in the original tips section
-- a patch intended for a different build
+- the patch refers to a different build
+- the original tips contain an error
+- the archived binary already includes a modified value
+
+
+# 6 DELTA Detection Patch
+
+Printed patch:
+
+    POKE &BB92F,00
+
+Expected original value:
+
+    01
+
+Actual binary value:
+
+    34
+
+Result:
+
+This address does not match the archived binary.
+
+This strongly suggests that the patch refers to a different version.
 
 
 # 7 Gameplay Parameter Patches
 
-The gameplay patches match the binary.
+The gameplay-related patches match the binary.
 
 Starting round:
 
@@ -125,22 +133,32 @@ Number of lives:
 
     POKE &BB0A5,n
 
+These values correspond to the initial state defined in the program.
 
-# 8 Conclusion
 
-Some patch addresses described in the original tips section match the archived
-binary, while others do not.
+# 8 Interpretation
 
-Confirmed valid:
+The mismatch strongly suggests that the printed tips are not universal.
+
+Most likely explanations:
+
+- the tips were written for a different version (e.g. earlier BBS release)
+- the archived binary corresponds to version 1.10
+- some values may have already been modified in the distributed object file
+
+
+# 9 Conclusion
+
+Confirmed valid for this version:
 
     BB50C
     BB0A2
     BB0A5
 
-Unconfirmed or incorrect:
+Not matching this version:
 
     BB884
     BB92F
 
-Further investigation is required to determine whether these addresses refer to
-another build or contain typographical errors in the original documentation.
+Therefore, patch addresses should be treated as version-dependent and verified
+before use.
