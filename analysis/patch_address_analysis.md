@@ -8,23 +8,23 @@ The addresses were checked against the archived binary:
 
 Target system:
 
-    SHARP pocket computer series
+    SHARP pocket computer series  
     CPU: SC62015
 
 
 # 1 Overview
 
-The original tips section for Building Rescue describes several memory patches
+The original tips section for Building Rescue describes several memory patches  
 that can modify gameplay behaviour.
 
 Examples include:
 
-- disabling sound
-- forcing BEEP sound
-- changing number of lives
-- changing starting round
+- disabling sound  
+- forcing BEEP sound  
+- changing number of lives  
+- changing starting round  
 
-However, when tested on real hardware, some of these addresses did not behave
+However, when tested on real hardware, some of these addresses did not behave  
 as described.
 
 Therefore, the addresses were verified against the archived binary.
@@ -42,22 +42,22 @@ The runtime base address of the program is:
 
 Note:
 
-The object file includes a header, so offsets in the file do not directly
+The object file includes a header, so offsets in the file do not directly  
 correspond to runtime addresses.
 
 
 # 3 Patch Address Verification
 
-The following table compares the values described in the printed tips with the
+The following table compares the values described in the printed tips with the  
 actual bytes found in the binary.
 
-Address    Expected value    Actual value    Result
----------------------------------------------------
-BB50C      2B                2B              OK
-BB884      61                07              Mismatch
-BB92F      01                34              Mismatch
-BB0A2      01                01              OK
-BB0A5      03                03              OK
+Address | Expected | Actual | Result  
+---|---|---|---  
+BB50C | 2B | 2B | OK  
+BB884 | 61 | 07 | Mismatch  
+BB92F | 01 | 34 | Mismatch  
+BB0A2 | 01 | 01 | OK  
+BB0A5 | 03 | 03 | OK  
 
 
 # 4 Sound Disable Patch
@@ -95,9 +95,9 @@ The value does not match the printed description.
 
 This suggests either:
 
-- the patch refers to a different build
-- the original tips contain an error
-- the archived binary already includes a modified value
+- the patch refers to a different build  
+- the original tips contain an error  
+- the archived binary already includes a modified value  
 
 
 # 6 DELTA Detection Patch
@@ -142,32 +142,50 @@ The mismatch strongly suggests that the printed tips are not universal.
 
 Most likely explanations:
 
-- the tips were written for a different version (e.g. earlier BBS release)
-- the archived binary corresponds to version 1.10
-- some values may have already been modified in the distributed object file
+- the tips were written for a different version (e.g. earlier BBS release)  
+- the archived binary corresponds to version 1.10  
+- some values may have already been modified in the distributed object file  
 
 
 # 9 Conclusion
 
 Confirmed valid for this version:
 
-    BB50C
-    BB0A2
-    BB0A5
+    BB50C  
+    BB0A2  
+    BB0A5  
 
 Not matching this version:
 
-    BB884
-    BB92F
+    BB884  
+    BB92F  
 
-Therefore, patch addresses should be treated as version-dependent and verified
+Therefore, patch addresses should be treated as version-dependent and verified  
 before use.
 
-For BR.OBJ v1.10, the byte patch addresses for initial values are:
 
-- starting round: `&BB0A8`
-- number of lives: `&BB0AB`
+# 10 Corrected Patch Addresses (BR.OBJ v1.10)
 
-The previously cited addresses `&BB0A2` and `&BB0A5` fall inside the preceding `CALLF VRAMPP` instruction and are not the actual value bytes.
+For BR.OBJ v1.10, the actual byte locations for gameplay parameters are:
 
-The addresses `&BB884` and `&BB92F` also resolve to instruction operands in unrelated code/data locations in v1.10, and therefore do not match the published tips for this version.
+- starting round: &BB0A8  
+- number of lives: &BB0AB  
+
+The previously cited addresses:
+
+    &BB0A2  
+    &BB0A5  
+
+fall inside the preceding instruction:
+
+    CALLF VRAMPP  
+
+and are not the actual value bytes.
+
+Additionally:
+
+- &BB884  
+- &BB92F  
+
+resolve to instruction operands in unrelated code/data locations in v1.10,  
+and therefore do not match the published tips for this version.
