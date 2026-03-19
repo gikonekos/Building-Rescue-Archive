@@ -7,6 +7,20 @@ Working notes, intermediate hypotheses, and experimental logs are preserved in:
 
 - `analysis/work/`
 
+## Core Analysis
+
+The following documents represent the core technical findings of this project:
+
+- `display_pipeline_analysis.md`  
+  → Rendering architecture and grayscale mechanism
+
+- `vram_and_display_memory_analysis.md`  
+  → VRAM structure and memory behavior
+
+- `sound_system_analysis.md`  
+  → Dual sound system (tone + bitstream playback)
+  
+
 ---
 
 ## Recommended Reading Order
