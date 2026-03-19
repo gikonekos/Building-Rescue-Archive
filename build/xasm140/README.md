@@ -81,6 +81,8 @@ Partial mismatch remained.
 
 Final reconstructed build.
 
+This source can be used to reproduce the original binary in a modern environment.
+
 - Assembles correctly with XASM 1.40 (modern environment)
 - Produces a binary **identical to BR.OBJ**
 - Preserves original structure and data
