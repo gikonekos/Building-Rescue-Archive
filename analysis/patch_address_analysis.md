@@ -162,3 +162,12 @@ Not matching this version:
 
 Therefore, patch addresses should be treated as version-dependent and verified
 before use.
+
+For BR.OBJ v1.10, the byte patch addresses for initial values are:
+
+- starting round: `&BB0A8`
+- number of lives: `&BB0AB`
+
+The previously cited addresses `&BB0A2` and `&BB0A5` fall inside the preceding `CALLF VRAMPP` instruction and are not the actual value bytes.
+
+The addresses `&BB884` and `&BB92F` also resolve to instruction operands in unrelated code/data locations in v1.10, and therefore do not match the published tips for this version.
