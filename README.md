@@ -194,14 +194,6 @@ Authors:
 
 ---
 
-# License
-
-Original rights remain with the respective authors.
-
-This repository exists for **historical preservation and research purposes**.
-
----
-
 # Related Material
 
 ![PJ Plaza comic](docs/pj_plaza_comic.png)
@@ -223,7 +215,11 @@ This project is based on the original software *Building Rescue* (1994).
 
 The original program is distributed under the following freeware terms:
 
-### Original License (Japanese)
+This repository exists for **historical preservation and research purposes**.
+
+---
+
+### XASM140 Original License (Japanese)
 
 このプログラムはフリーウェアです。著作権は加古英児および近成人が保持します。  
 配布や転載は、改変せずに、営利を目的とせずに、作者の持つ著作上の権利を侵害しないようにしてもらえれば、あとは自由に配布転載して結構です。
