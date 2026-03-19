@@ -13,10 +13,10 @@ This directory contains reconstructed build outputs for the project.
 ---
 
 ## Structure
-
+```
 build/
   └─ xasm140/ - XASM 1.40 build outputs and verification data
-
+```
 ---
 
 ## Role in this Project
