@@ -58,20 +58,40 @@ Required environment:
 
 ---
 
-# Files
+# Repository Structure
 
-This repository preserves the following materials.
+This repository is organized into the following directories:
 
-- **BR_UTF8.asm** — UTF-8 converted XASM assembler source code (readable on modern systems)
-- **BR_original.asm** — original assembler source file preserved as distributed
-- **BR.OBJ** — assembled game object file
-- **BR110.TXT** — later archive documentation (2008 distribution notes)
-- **BR.INF** — original information file
-- **BRINF.TXT** — Vector distribution header
+## br110/
 
-These files are preserved as part of a **historical software archive**.
+Original program data and source files:
 
-The original program was assembled using **XASM**.
+- BR.OBJ — game object file  
+- BR_original.asm — original assembler source  
+- BR_UTF8.asm — UTF-8 converted source  
+- BR.INF / BRINF.TXT — original distribution metadata  
+- BR110.TXT — later archive notes (2008)
+
+## docs/
+
+Documentation and reference materials:
+
+- BR110-manual_ja.md / en.md — game manual  
+- BR-inf_ja.md / en.md — original information text  
+- OpeningDemo.jpg — real hardware capture  
+- pj_plaza_comic.png — related comic material  
+
+## analysis/
+
+Technical analysis and reverse engineering notes:
+
+- patch verification  
+- binary analysis  
+- hardware behavior documentation  
+
+## build/
+
+Reconstruction and build-related materials
 
 ---
 
