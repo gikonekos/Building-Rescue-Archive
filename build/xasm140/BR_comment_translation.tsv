@@ -1,0 +1,1252 @@
+c0001	1	section divider
+c0002	2	* building rescue v1.1 *
+c0003	3	section divider
+c0004	4	* for e500 *
+c0005	5	section divider
+c0006	6	* h6 7 10 *
+c0007	7	by Kenkichi Motoi
+c0008	8	* and *
+c0009	9	by GAME Shokunin
+c0010	10	section divider
+c0011	11	note
+c0012	13	clear demo time
+c0013	14	note definitions
+c0014	103	note
+c0015	135	rry: equ 126
+c0016	152	time1: equ 144
+c0017	189	note
+c0018	215	note
+c0019	219	note
+c0020	233	note
+c0021	236	note
+c0022	252	note
+c0023	255	note
+c0024	290	note
+c0025	294	note
+c0026	300	start long
+c0027	305	start short
+c0028	330	note
+c0029	336	note
+c0030	339	left bracket basic right bracket
+c0031	341	defeated
+c0032	351	note
+c0033	357	note
+c0034	361	note
+c0035	365	note
+c0036	366	section divider
+c0037	367	* ending
+c0038	368	section divider
+c0039	373	note
+c0040	406	note
+c0041	410	note
+c0042	420	note
+c0043	428	defeated music
+c0044	433	note
+c0045	468	note
+c0046	470	section divider
+c0047	471	cleanup
+c0048	472	section divider
+c0049	473	note
+c0050	485	section divider
+c0051	486	ufo spawn
+c0052	487	section divider
+c0053	488	note
+c0054	512	note
+c0055	519	note
+c0056	522	note
+c0057	526	note
+c0058	530	note
+c0059	535	note
+c0060	542	note
+c0061	547	note
+c0062	551	note
+c0063	555	note
+c0064	560	note
+c0065	577	note
+c0066	591	note
+c0067	606	note
+c0068	607	section divider
+c0069	608	one dot upward scroll
+c0070	609	section divider
+c0071	610	note
+c0072	652	note
+c0073	653	section divider
+c0074	654	one dot downward scroll
+c0075	655	section divider
+c0076	656	note
+c0077	698	note
+c0078	699	section divider
+c0079	700	building shake
+c0080	701	section divider
+c0081	702	note
+c0082	707	note
+c0083	710	note
+c0084	714	note
+c0085	717	note
+c0086	721	note
+c0087	724	note
+c0088	728	note
+c0089	732	note
+c0090	745	note
+c0091	759	note
+c0092	760	section divider
+c0093	761	note
+c0094	802	note
+c0095	839	note
+c0096	841	row 4
+c0097	842	row 4
+c0098	843	i plus 1
+c0099	844	row 3
+c0100	845	map 2/3
+c0101	848	note
+c0102	856	note
+c0103	857	section divider
+c0104	858	screen display
+c0105	859	section divider
+c0106	860	note
+c0107	881	note
+c0108	918	note
+c0109	919	section divider
+c0110	920	draw character vram1
+c0111	921	section divider
+c0112	922	note
+c0113	927	player
+c0114	969	note
+c0115	979	note
+c0116	1019	note
+c0117	1020	section divider
+c0118	1021	erase character vram1
+c0119	1022	section divider
+c0120	1023	note
+c0121	1028	player
+c0122	1075	note
+c0123	1084	note
+c0124	1091	note
+c0125	1122	note
+c0126	1130	note
+c0127	1131	section divider
+c0128	1132	draw character vram1
+c0129	1133	section divider
+c0130	1134	note
+c0131	1157	note
+c0132	1170	note
+c0133	1182	note
+c0134	1205	note
+c0135	1206	section divider
+c0136	1207	erase character vram1
+c0137	1208	section divider
+c0138	1209	note
+c0139	1232	note
+c0140	1257	note
+c0141	1283	note
+c0142	1284	section divider
+c0143	1285	sound generation
+c0144	1286	input hl data address
+c0145	1287	section divider
+c0146	1288	note
+c0147	1293	size set
+c0148	1302	beep on
+c0149	1314	beep off
+c0150	1321	note
+c0151	1331	note
+c0152	1340	note
+c0153	1353	note
+c0154	1365	note
+c0155	1377	note
+c0156	1386	note
+c0157	1387	section divider
+c0158	1388	score display
+c0159	1389	section divider
+c0160	1390	note
+c0161	1400	note
+c0162	1409	note
+c0163	1418	note
+c0164	1431	note
+c0165	1436	note
+c0166	1441	note
+c0167	1446	note
+c0168	1451	note
+c0169	1456	note
+c0170	1474	note
+c0171	1475	section divider
+c0172	1476	full display
+c0173	1477	section divider
+c0174	1478	note
+c0175	1492	note
+c0176	1501	note
+c0177	1510	note
+c0178	1523	note
+c0179	1528	note
+c0180	1533	note
+c0181	1538	note
+c0182	1542	note
+c0183	1543	section divider
+c0184	1544	full display
+c0185	1545	section divider
+c0186	1546	note
+c0187	1560	note
+c0188	1569	note
+c0189	1578	note
+c0190	1591	note
+c0191	1596	note
+c0192	1601	note
+c0193	1609	note
+c0194	1610	section divider
+c0195	1611	high score display
+c0196	1612	section divider
+c0197	1613	note
+c0198	1623	note
+c0199	1632	note
+c0200	1641	note
+c0201	1654	note
+c0202	1659	note
+c0203	1664	note
+c0204	1669	note
+c0205	1674	note
+c0206	1679	note
+c0207	1687	note
+c0208	1688	section divider
+c0209	1689	stage count display
+c0210	1690	section divider
+c0211	1691	note
+c0212	1704	note
+c0213	1713	note
+c0214	1722	note
+c0215	1735	note
+c0216	1740	note
+c0217	1748	note
+c0218	1764	note
+c0219	1765	section divider
+c0220	1766	clear vram1
+c0221	1767	section divider
+c0222	1768	note
+c0223	1785	note
+c0224	1786	section divider
+c0225	1787	clear vram2
+c0226	1788	section divider
+c0227	1789	note
+c0228	1806	note
+c0229	1813	note
+c0230	1819	note
+c0231	1851	player
+c0232	1853	player
+c0233	1881	note
+c0234	1887	note
+c0235	1902	note
+c0236	1903	section divider
+c0237	1904	man movement
+c0238	1905	section divider
+c0239	1906	note
+c0240	1927	note
+c0241	1931	hang on
+c0242	1951	note
+c0243	1965	note
+c0244	1967	brace
+c0245	1973	window closed
+c0246	1978	section divider
+c0247	1979	move left
+c0248	1980	section divider
+c0249	1981	note
+c0250	1983	hanging counter
+c0251	1984	left
+c0252	1988	note
+c0253	1995	map 06/24
+c0254	1999	closed window
+c0255	2003	note
+c0256	2023	closed window
+c0257	2025	wall
+c0258	2027	note
+c0259	2029	sky
+c0260	2031	sky
+c0261	2033	obstacle one
+c0262	2035	obstacle two
+c0263	2037	obstacle three
+c0264	2039	obstacle four
+c0265	2041	obstacle five
+c0266	2043	note
+c0267	2055	section divider
+c0268	2056	move right
+c0269	2057	section divider
+c0270	2059	right
+c0271	2069	map 6/24
+c0272	2073	closed window
+c0273	2095	closed window
+c0274	2097	wall
+c0275	2099	note
+c0276	2101	sky
+c0277	2103	sky
+c0278	2105	obstacle one
+c0279	2107	obstacle two
+c0280	2109	obstacle three
+c0281	2111	obstacle four
+c0282	2113	obstacle five
+c0283	2115	note
+c0284	2127	section divider
+c0285	2128	move right hand
+c0286	2129	section divider
+c0287	2131	up
+c0288	2133	note
+c0289	2142	brace
+c0290	2156	right
+c0291	2158	raise left
+c0292	2176	closed window
+c0293	2178	wall
+c0294	2180	note
+c0295	2182	sky
+c0296	2184	sky
+c0297	2186	obstacle one
+c0298	2188	obstacle two
+c0299	2190	obstacle three
+c0300	2192	obstacle four
+c0301	2194	obstacle five
+c0302	2196	note
+c0303	2201	score equals score plus 50
+c0304	2229	note
+c0305	2248	closed window
+c0306	2250	wall
+c0307	2252	note
+c0308	2254	sky
+c0309	2256	sky
+c0310	2258	obstacle one
+c0311	2260	obstacle two
+c0312	2262	obstacle three
+c0313	2264	obstacle four
+c0314	2266	obstacle five
+c0315	2268	note
+c0316	2273	score equals score plus 50
+c0317	2285	note
+c0318	2286	right hand
+c0319	2287	note
+c0320	2289	note
+c0321	2298	brace
+c0322	2312	right
+c0323	2314	raise left
+c0324	2332	closed window
+c0325	2334	wall
+c0326	2336	note
+c0327	2338	sky
+c0328	2340	sky
+c0329	2342	obstacle one
+c0330	2344	obstacle two
+c0331	2346	obstacle three
+c0332	2348	obstacle four
+c0333	2350	obstacle five
+c0334	2357	score equals score plus 50
+c0335	2385	note
+c0336	2404	closed window
+c0337	2406	wall
+c0338	2408	note
+c0339	2410	sky
+c0340	2412	sky
+c0341	2414	obstacle one
+c0342	2416	obstacle two
+c0343	2418	obstacle three
+c0344	2420	obstacle four
+c0345	2422	obstacle five
+c0346	2429	score equals score plus 50
+c0347	2458	note
+c0348	2473	note
+c0349	2484	score equals score plus 50
+c0350	2493	note
+c0351	2494	note
+c0352	2522	note
+c0353	2523	section divider
+c0354	2524	display vram1
+c0355	2525	section divider
+c0356	2526	note
+c0357	2537	note
+c0358	2538	section divider
+c0359	2539	display vram2
+c0360	2540	section divider
+c0361	2541	note
+c0362	2552	note
+c0363	2564	note
+c0364	2567	note
+c0365	2570	note
+c0366	2573	note
+c0367	2576	note
+c0368	2579	note
+c0369	2582	note
+c0370	2585	note
+c0371	2593	note
+c0372	2596	note
+c0373	2599	note
+c0374	2602	note
+c0375	2605	note
+c0376	2608	note
+c0377	2611	note
+c0378	2614	note
+c0379	2628	note
+c0380	2631	note
+c0381	2634	note
+c0382	2637	note
+c0383	2640	note
+c0384	2643	note
+c0385	2646	note
+c0386	2649	note
+c0387	2659	note
+c0388	2660	section divider
+c0389	2661	* 8*8 put *
+c0390	2662	* (qx),(qy),(qz) *
+c0391	2663	section divider
+c0392	2664	note
+c0393	2685	note
+c0394	2722	note
+c0395	2723	section divider
+c0396	2724	draw character vram1
+c0397	2725	section divider
+c0398	2726	note
+c0399	2753	note
+c0400	2763	note
+c0401	2781	note
+c0402	2796	note
+c0403	2801	note
+c0404	2803	note
+c0405	2808	note
+c0406	2810	note
+c0407	2815	note
+c0408	2817	note
+c0409	2820	note
+c0410	2823	note
+c0411	2837	section divider
+c0412	2838	* key function
+c0413	2839	section divider
+c0414	2845	note
+c0415	2850	note
+c0416	2855	note
+c0417	2860	note
+c0418	2866	note
+c0419	2867	section divider
+c0420	2868	* stick
+c0421	2869	* out: a equals (2,4,6,8)
+c0422	2870	* 7,4,6,5
+c0423	2871	section divider
+c0424	2872	note
+c0425	2880	basic key
+c0426	2883	shift
+c0427	2892	equals
+c0428	2900	ctrl
+c0429	2908	plus
+c0430	2922	note
+c0431	2923	ctrl
+c0432	2930	basic key
+c0433	2934	shift check
+c0434	2946	note
+c0435	2949	note
+c0436	2950	section divider
+c0437	2951	random number generation
+c0438	2952	* out: a equals (0-255)
+c0439	2953	section divider
+c0440	2954	note
+c0441	2967	note
+c0442	2985	note
+c0443	2998	note
+c0444	3001	note
+c0445	3005	note
+c0446	3040	note
+c0447	3045	section divider
+c0448	3046	object init
+c0449	3047	section divider
+c0450	3048	note
+c0451	3058	note
+c0452	3059	section divider
+c0453	3060	window init
+c0454	3061	section divider
+c0455	3062	note
+c0456	3072	note
+c0457	3087	note
+c0458	3096	note
+c0459	3108	note
+c0460	3109	window open
+c0461	3114	note
+c0462	3115	window closed
+c0463	3120	note
+c0464	3121	left wall
+c0465	3126	note
+c0466	3127	sky
+c0467	3133	window one
+c0468	3139	window two
+c0469	3145	window three
+c0470	3151	window four
+c0471	3157	obstacle
+c0472	3163	window open steel frame
+c0473	3169	signboard left
+c0474	3175	signboard center
+c0475	3181	signboard right
+c0476	3187	earthquake
+c0477	3193	cloud
+c0478	3200	end
+c0479	3216	note
+c0480	3217	section divider
+c0481	3218	window setup
+c0482	3219	section divider
+c0483	3220	note
+c0484	3234	note
+c0485	3235	window open
+c0486	3240	note
+c0487	3241	window closed
+c0488	3246	note
+c0489	3247	left wall
+c0490	3252	note
+c0491	3253	right wall
+c0492	3259	window one
+c0493	3265	window two
+c0494	3271	window three
+c0495	3277	window four
+c0496	3283	obstacle
+c0497	3289	obstacle
+c0498	3295	signboard left
+c0499	3301	signboard center
+c0500	3307	signboard right
+c0501	3313	earthquake
+c0502	3319	cloud
+c0503	3325	obstacle
+c0504	3342	note
+c0505	3418	cloud
+c0506	3433	note
+c0507	3434	open
+c0508	3440	close
+c0509	3446	right wall
+c0510	3452	sky
+c0511	3458	window one
+c0512	3483	window two
+c0513	3508	window three
+c0514	3533	open
+c0515	3558	note
+c0516	3559	obstacle
+c0517	3586	throw object
+c0518	3606	note
+c0519	3607	throw object from closed window
+c0520	3612	note
+c0521	3634	signboard left
+c0522	3661	throw object
+c0523	3677	note
+c0524	3678	signboard center
+c0525	3705	throw object
+c0526	3715	note
+c0527	3716	signboard left
+c0528	3743	throw object
+c0529	3754	note
+c0530	3765	note
+c0531	3766	cloud
+c0532	3772	note
+c0533	3773	end
+c0534	3780	section divider
+c0535	3781	throw object
+c0536	3782	section divider
+c0537	3783	note
+c0538	3811	note
+c0539	3830	section divider
+c0540	3831	object movement
+c0541	3832	section divider
+c0542	3861	note
+c0543	3865	note
+c0544	3873	note
+c0545	3877	note
+c0546	3895	note
+c0547	3953	note
+c0548	4004	note
+c0549	4030	note
+c0550	4031	section divider
+c0551	4032	window display
+c0552	4033	section divider
+c0553	4125	note
+c0554	4126	window open
+c0555	4132	window closed
+c0556	4138	right wall
+c0557	4144	sky
+c0558	4150	window one
+c0559	4159	window two
+c0560	4168	note
+c0561	4169	window three
+c0562	4178	note
+c0563	4179	open
+c0564	4188	note
+c0565	4189	obstacle
+c0566	4198	note
+c0567	4199	throw object from closed window
+c0568	4205	note
+c0569	4206	signboard left
+c0570	4215	note
+c0571	4216	signboard center
+c0572	4225	note
+c0573	4226	signboard right
+c0574	4235	ufo
+c0575	4241	note
+c0576	4242	cloud
+c0577	4248	note
+c0578	4249	end
+c0579	4256	window open
+c0580	4258	window closed
+c0581	4260	wall
+c0582	4262	empty space
+c0583	4264	window one
+c0584	4266	window two
+c0585	4268	window three
+c0586	4271	window four
+c0587	4273	obstacle
+c0588	4275	note
+c0589	4276	type
+c0590	4277	code zero window open
+c0591	4278	code one window closed
+c0592	4279	code two left wall
+c0593	4280	code three sky
+c0594	4281	code four window one
+c0595	4282	code five window two
+c0596	4283	code six window three
+c0597	4284	code seven window four
+c0598	4285	code eight obstacle
+c0599	4286	code nine drop steel frame from open window
+c0600	4287	code ten signboard left from open window
+c0601	4288	code eleven signboard center from open window
+c0602	4289	code twelve signboard right from open window
+c0603	4290	map 13 :  UFO
+c0604	4291	code fourteen cloud
+c0605	4292	map 15 :  END
+c0606	4293	section divider
+c0607	4294	* key data tbl
+c0608	4295	section divider
+c0609	4296	note
+c0610	4297	udlr
+c0611	4298	note
+c0612	4299	row 0000
+c0613	4300	row 0001
+c0614	4301	row 0010
+c0615	4302	row 0011
+c0616	4303	row 0100
+c0617	4304	row 0101
+c0618	4305	row 0110
+c0619	4306	row 0111
+c0620	4307	row 1000
+c0621	4308	row 1001
+c0622	4309	row 1010
+c0623	4310	row 1011
+c0624	4311	row 1100
+c0625	4312	row 1101
+c0626	4313	row 1110
+c0627	4314	row 1111
+c0628	4315	note
+c0629	4317	section divider
+c0630	4318	building rescue theme song
+c0631	4319	conposed by
+c0632	4320	(c)1994 06 23 kenkichi motoi
+c0633	4321	section divider
+c0634	4322	game start!!
+c0635	4355	music 1l:
+c0636	4390	note
+c0637	4391	defeated
+c0638	4392	defeated mp one
+c0639	4393	(c)1994 kenkichi motoi
+c0640	4420	note
+c0641	4421	note
+c0642	4422	piki right
+c0643	4425	poko left
+c0644	4428	steel frame hit
+c0645	4431	clear mp one
+c0646	4432	(c)1994 kenkichi motoi
+c0647	4498	note
+c0648	4499	bonus
+c0649	4506	steel frame fall
+c0650	4507	steel frame mp one
+c0651	4512	note
+c0652	4513	signboard
+c0653	4514	signboard mp one
+c0654	4519	note
+c0655	4521	section divider
+c0656	4522	building rescue theme song
+c0657	4523	conposed by
+c0658	4524	(c)1994 06 23 kenkichi motoi
+c0659	4525	section divider
+c0660	4526	ending
+c0661	4591	horizontal movement
+c0662	4593	note
+c0663	4594	ouch
+c0664	4598	ouch wav
+c0665	4625	hang on
+c0666	4629	hang on wav
+c0667	4689	note
+c0668	4691	note
+c0669	4715	note
+c0670	4740	note
+c0671	4741	note
+c0672	4767	note
+c0673	4769	note
+c0674	4793	note
+c0675	4818	note
+c0676	4819	note
+c0677	4845	note
+c0678	4846	section divider
+c0679	4847	* char data
+c0680	4848	section divider
+c0681	4850	db 050h,001h
+c0682	4862	db 0a0h,002h
+c0683	4863	glyph a
+c0684	4864	glyph b
+c0685	4865	glyph c
+c0686	4866	glyph d
+c0687	4867	glyph e
+c0688	4868	glyph f
+c0689	4869	glyph g
+c0690	4870	glyph h
+c0691	4871	glyph i
+c0692	4872	glyph j
+c0693	4873	glyph k
+c0694	4874	glyph l
+c0695	4875	glyph m
+c0696	4876	glyph n
+c0697	4877	glyph o
+c0698	4878	glyph p
+c0699	4879	glyph q
+c0700	4880	glyph r
+c0701	4881	glyph s
+c0702	4882	glyph t
+c0703	4883	glyph u
+c0704	4884	glyph v
+c0705	4885	glyph w
+c0706	4886	glyph x
+c0707	4887	glyph y
+c0708	4888	glyph z
+c0709	4889	note
+c0710	4891	a player
+c0711	4892	i i minus
+c0712	4893	u e
+c0713	4894	e down arrow
+c0714	4895	o up arrow
+c0715	4896	ka right arrow
+c0716	4897	ki left arrow
+c0717	4898	ku left bracket
+c0718	4899	ke plus
+c0719	4900	ko right bracket
+c0720	4901	sa equals
+c0721	4902	shi c
+c0722	4903	su amp
+c0723	4905	note
+c0724	4908	plane data
+c0725	4910	include vmap1.dat
+c0726	4911	map 130  00723456789ABCDEF
+c0727	4920	map 120  00123456789ABCDEF
+c0728	4921	row 119
+c0729	4922	row 118
+c0730	4923	row 117
+c0731	4924	row 116
+c0732	4925	row 115
+c0733	4926	row 114
+c0734	4927	row 113
+c0735	4928	row 112
+c0736	4929	row 111
+c0737	4930	map 110  00123456789ABCDEF
+c0738	4931	row 109
+c0739	4932	row 108
+c0740	4933	row 107
+c0741	4934	row 106
+c0742	4935	row 105
+c0743	4936	row 104
+c0744	4937	row 103
+c0745	4938	row 102
+c0746	4939	row 101
+c0747	4940	map 100  00123456789ABCDEF
+c0748	4941	row 99
+c0749	4942	row 98
+c0750	4943	row 97
+c0751	4944	row 96
+c0752	4945	row 95
+c0753	4946	row 94
+c0754	4947	row 93
+c0755	4948	row 92
+c0756	4949	row 91
+c0757	4950	map 90   00123456789ABCDEF
+c0758	4951	row 89
+c0759	4952	row 88
+c0760	4953	row 87
+c0761	4954	row 86
+c0762	4955	row 85
+c0763	4956	row 84
+c0764	4957	row 83
+c0765	4958	row 82
+c0766	4959	row 81
+c0767	4960	map 80   00123456789ABCDEF
+c0768	4961	row 79
+c0769	4962	row 78
+c0770	4963	row 77
+c0771	4964	row 76
+c0772	4965	row 75
+c0773	4966	row 74
+c0774	4967	row 73
+c0775	4968	row 72
+c0776	4969	row 71
+c0777	4970	map 70   00123456789ABCDEF
+c0778	4971	row 69
+c0779	4972	row 68
+c0780	4973	row 67
+c0781	4974	row 66
+c0782	4975	row 65
+c0783	4976	row 64
+c0784	4977	row 63
+c0785	4978	row 62
+c0786	4979	row 61
+c0787	4980	map 60   00123456789ABCDEF
+c0788	4981	row 59
+c0789	4982	row 58
+c0790	4983	row 57
+c0791	4984	row 56
+c0792	4985	row 55
+c0793	4986	row 54
+c0794	4987	row 53
+c0795	4988	row 52
+c0796	4989	row 51
+c0797	4990	map 50   00123456789ABCDEF
+c0798	4991	row 49
+c0799	4992	row 48
+c0800	4993	row 47
+c0801	4994	row 46
+c0802	4995	row 45
+c0803	4996	row 44
+c0804	4997	row 43
+c0805	4998	row 42
+c0806	4999	row 41
+c0807	5000	map 40   00123456789ABCDEF
+c0808	5001	row 39
+c0809	5002	row 38
+c0810	5003	row 37
+c0811	5004	row 36
+c0812	5005	row 35
+c0813	5006	row 34
+c0814	5007	row 33
+c0815	5008	row 32
+c0816	5009	row 31
+c0817	5010	map 30   00123456789ABCDEF
+c0818	5011	row 29
+c0819	5012	row 28
+c0820	5013	row 27
+c0821	5014	row 26
+c0822	5015	row 25
+c0823	5016	row 24
+c0824	5017	row 23
+c0825	5018	row 22
+c0826	5019	row 21
+c0827	5020	map 20   00123456789ABCDEF
+c0828	5021	row 19
+c0829	5022	row 18
+c0830	5023	row 17
+c0831	5024	row 16
+c0832	5025	row 15
+c0833	5026	row 14
+c0834	5027	row 13
+c0835	5028	row 12
+c0836	5029	row 11
+c0837	5030	map 10   00123456789ABCDEF
+c0838	5031	row 9
+c0839	5032	row 8
+c0840	5033	row 7
+c0841	5034	row 6
+c0842	5035	row 5
+c0843	5036	row 4
+c0844	5037	row 3
+c0845	5038	row 2
+c0846	5039	row 1
+c0847	5040	row 0
+c0848	5042	include vmap2.dat
+c0849	5043	map 1           01   23   45   67
+c0850	5044	row 0
+c0851	5045	row 1
+c0852	5046	row 2
+c0853	5047	row 3
+c0854	5048	row 4
+c0855	5049	row 5
+c0856	5050	row 6
+c0857	5051	row 7
+c0858	5052	row 8
+c0859	5053	row 9
+c0860	5054	row 0
+c0861	5055	row 1
+c0862	5056	row 2
+c0863	5057	row 3
+c0864	5058	row 4
+c0865	5059	row 5
+c0866	5060	row 6
+c0867	5061	row 7
+c0868	5062	row 8
+c0869	5063	row 9
+c0870	5064	row 0
+c0871	5065	row 1
+c0872	5066	row 2
+c0873	5067	row 3
+c0874	5068	row 4
+c0875	5069	row 5
+c0876	5070	row 6
+c0877	5071	row 7
+c0878	5072	row 8
+c0879	5073	row 9
+c0880	5074	row 0
+c0881	5075	row 1
+c0882	5076	row 2
+c0883	5077	row 3
+c0884	5078	row 4
+c0885	5079	row 5
+c0886	5080	row 6
+c0887	5081	row 7
+c0888	5082	row 8
+c0889	5083	row 9
+c0890	5084	row 0
+c0891	5085	row 1
+c0892	5086	row 2
+c0893	5087	row 3
+c0894	5088	row 4
+c0895	5089	row 5
+c0896	5090	row 6
+c0897	5091	row 7
+c0898	5092	row 8
+c0899	5093	row 9
+c0900	5094	row 0
+c0901	5095	row 1
+c0902	5096	row 2
+c0903	5097	row 3
+c0904	5098	row 4
+c0905	5099	row 5
+c0906	5100	row 6
+c0907	5101	row 7
+c0908	5102	row 8
+c0909	5103	row 9
+c0910	5104	row 0
+c0911	5105	row 1
+c0912	5106	row 2
+c0913	5107	row 3
+c0914	5108	row 4
+c0915	5109	row 5
+c0916	5110	row 6
+c0917	5111	row 7
+c0918	5112	row 8
+c0919	5113	row 9
+c0920	5114	row 0
+c0921	5115	row 1
+c0922	5116	row 2
+c0923	5117	row 3
+c0924	5118	row 4
+c0925	5119	row 5
+c0926	5120	row 6
+c0927	5121	row 7
+c0928	5122	row 8
+c0929	5123	row 9
+c0930	5124	row 0
+c0931	5125	row 1
+c0932	5126	row 2
+c0933	5127	row 3
+c0934	5128	row 4
+c0935	5129	row 5
+c0936	5130	row 6
+c0937	5131	row 7
+c0938	5132	row 8
+c0939	5133	row 9
+c0940	5134	row 0
+c0941	5135	row 1
+c0942	5136	row 2
+c0943	5137	row 3
+c0944	5138	row 4
+c0945	5139	row 5
+c0946	5140	row 6
+c0947	5141	row 7
+c0948	5142	row 8
+c0949	5143	row 9
+c0950	5144	row 0
+c0951	5145	row 1
+c0952	5146	row 2
+c0953	5147	row 3
+c0954	5148	row 4
+c0955	5149	row 5
+c0956	5150	row 6
+c0957	5151	row 7
+c0958	5152	row 8
+c0959	5153	row 9
+c0960	5154	row 0
+c0961	5155	row 1
+c0962	5156	row 2
+c0963	5157	row 3
+c0964	5158	row 4
+c0965	5159	row 5
+c0966	5160	row 6
+c0967	5161	row 7
+c0968	5162	row 8
+c0969	5163	row 9
+c0970	5164	row 0
+c0971	5165	row 1
+c0972	5166	row 2
+c0973	5167	row 3
+c0974	5168	row 4
+c0975	5169	row 5
+c0976	5170	row 6
+c0977	5171	row 7
+c0978	5172	row 8
+c0979	5173	row 9
+c0980	5175	include vmap3.dat
+c0981	5176	map 130  00123456789ABCDEF
+c0982	5185	map 120  00123456789ABCDEF
+c0983	5186	row 119
+c0984	5187	row 118
+c0985	5188	row 117
+c0986	5189	row 116
+c0987	5190	row 115
+c0988	5191	row 114
+c0989	5192	row 113
+c0990	5193	row 112
+c0991	5194	row 111
+c0992	5195	map 110  00123456789ABCDEF
+c0993	5196	row 109
+c0994	5197	row 108
+c0995	5198	row 107
+c0996	5199	row 106
+c0997	5200	row 105
+c0998	5201	row 104
+c0999	5202	row 103
+c1000	5203	row 102
+c1001	5204	row 101
+c1002	5205	map 100  00123456789ABCDEF
+c1003	5206	row 99
+c1004	5207	row 98
+c1005	5208	row 97
+c1006	5209	row 96
+c1007	5210	row 95
+c1008	5211	row 94
+c1009	5212	row 93
+c1010	5213	row 92
+c1011	5214	row 91
+c1012	5215	map 90   00123456789ABCDEF
+c1013	5216	row 89
+c1014	5217	row 88
+c1015	5218	row 87
+c1016	5219	row 86
+c1017	5220	row 85
+c1018	5221	row 84
+c1019	5222	row 83
+c1020	5223	row 82
+c1021	5224	row 81
+c1022	5225	map 80   00123456789ABCDEF
+c1023	5226	row 79
+c1024	5227	row 78
+c1025	5228	row 77
+c1026	5229	row 76
+c1027	5230	row 75
+c1028	5231	row 74
+c1029	5232	row 73
+c1030	5233	row 72
+c1031	5234	row 71
+c1032	5235	map 70   00123456789ABCDEF
+c1033	5236	row 69
+c1034	5237	row 68
+c1035	5238	row 67
+c1036	5239	row 66
+c1037	5240	row 65
+c1038	5241	row 64
+c1039	5242	row 63
+c1040	5243	row 62
+c1041	5244	row 61
+c1042	5245	map 60   00123456789ABCDEF
+c1043	5246	row 59
+c1044	5247	row 58
+c1045	5248	row 57
+c1046	5249	row 56
+c1047	5250	row 55
+c1048	5251	row 54
+c1049	5252	row 53
+c1050	5253	row 52
+c1051	5254	row 51
+c1052	5255	map 50   00123456789ABCDEF
+c1053	5256	row 49
+c1054	5257	row 48
+c1055	5258	row 47
+c1056	5259	row 46
+c1057	5260	row 45
+c1058	5261	row 44
+c1059	5262	row 43
+c1060	5263	row 42
+c1061	5264	row 41
+c1062	5265	map 40   00123456789ABCDEF
+c1063	5266	row 39
+c1064	5267	row 38
+c1065	5268	row 37
+c1066	5269	row 36
+c1067	5270	row 35
+c1068	5271	row 34
+c1069	5272	row 33
+c1070	5273	row 32
+c1071	5274	row 31
+c1072	5275	map 30   00123456789ABCDEF
+c1073	5276	row 29
+c1074	5277	row 28
+c1075	5278	row 27
+c1076	5279	row 26
+c1077	5280	row 25
+c1078	5281	row 24
+c1079	5282	row 23
+c1080	5283	row 22
+c1081	5284	row 21
+c1082	5285	map 20   00123456789ABCDEF
+c1083	5286	row 19
+c1084	5287	row 18
+c1085	5288	row 17
+c1086	5289	row 16
+c1087	5290	row 15
+c1088	5291	row 14
+c1089	5292	row 13
+c1090	5293	row 12
+c1091	5294	row 11
+c1092	5295	map 10   00123456789ABCDEF
+c1093	5296	row 9
+c1094	5297	row 8
+c1095	5298	row 7
+c1096	5299	row 6
+c1097	5300	row 5
+c1098	5301	row 4
+c1099	5302	row 3
+c1100	5303	row 2
+c1101	5304	row 1
+c1102	5305	row 0
+c1103	5307	include vmap4.dat
+c1104	5308	map 130  00123454789ABCDEF
+c1105	5317	map 120  00123454789ABCDEF
+c1106	5318	row 119
+c1107	5319	row 118
+c1108	5320	row 117
+c1109	5321	row 116
+c1110	5322	row 115
+c1111	5323	row 114
+c1112	5324	row 113
+c1113	5325	row 112
+c1114	5326	row 111
+c1115	5327	map 110  00123454789ABCDEF
+c1116	5328	row 109
+c1117	5329	row 108
+c1118	5330	row 107
+c1119	5331	row 106
+c1120	5332	row 105
+c1121	5333	row 104
+c1122	5334	row 103
+c1123	5335	row 102
+c1124	5336	row 101
+c1125	5337	map 100  00123454789ABCDEF
+c1126	5338	row 99
+c1127	5339	row 98
+c1128	5340	row 97
+c1129	5341	row 96
+c1130	5342	row 95
+c1131	5343	row 94
+c1132	5344	row 93
+c1133	5345	row 92
+c1134	5346	row 91
+c1135	5347	map 90   00123454789ABCDEF
+c1136	5348	row 89
+c1137	5349	row 88
+c1138	5350	row 87
+c1139	5351	row 86
+c1140	5352	row 85
+c1141	5353	row 84
+c1142	5354	row 83
+c1143	5355	row 82
+c1144	5356	row 81
+c1145	5357	map 80   00123454789ABCDEF
+c1146	5358	row 79
+c1147	5359	row 78
+c1148	5360	row 77
+c1149	5361	row 76
+c1150	5362	row 75
+c1151	5363	row 74
+c1152	5364	row 73
+c1153	5365	row 72
+c1154	5366	row 71
+c1155	5367	map 70   00123454789ABCDEF
+c1156	5368	row 69
+c1157	5369	row 68
+c1158	5370	row 67
+c1159	5371	row 66
+c1160	5372	row 65
+c1161	5373	row 64
+c1162	5374	row 63
+c1163	5375	row 62
+c1164	5376	row 61
+c1165	5377	map 60   00123454789ABCDEF
+c1166	5378	row 59
+c1167	5379	row 58
+c1168	5380	row 57
+c1169	5381	row 56
+c1170	5382	row 55
+c1171	5383	row 54
+c1172	5384	row 53
+c1173	5385	row 52
+c1174	5386	row 51
+c1175	5387	map 50   00123454789ABCDEF
+c1176	5388	row 49
+c1177	5389	row 48
+c1178	5390	row 47
+c1179	5391	row 46
+c1180	5392	row 45
+c1181	5393	row 44
+c1182	5394	row 43
+c1183	5395	row 42
+c1184	5396	row 41
+c1185	5397	map 40   00123454789ABCDEF
+c1186	5398	row 39
+c1187	5399	row 38
+c1188	5400	row 37
+c1189	5401	row 36
+c1190	5402	row 35
+c1191	5403	row 34
+c1192	5404	row 33
+c1193	5405	row 32
+c1194	5406	row 31
+c1195	5407	map 30   00120454789ABCDEF
+c1196	5408	row 29
+c1197	5409	row 28
+c1198	5410	row 27
+c1199	5411	row 26
+c1200	5412	row 25
+c1201	5413	row 24
+c1202	5414	row 23
+c1203	5415	row 22
+c1204	5416	row 21
+c1205	5417	map 20   00120454789ABCDEF
+c1206	5418	row 18
+c1207	5419	row 19
+c1208	5420	row 17
+c1209	5421	row 16
+c1210	5422	row 15
+c1211	5423	row 14
+c1212	5424	row 13
+c1213	5425	row 12
+c1214	5426	row 11
+c1215	5427	map 10   00120454789ABCDEF
+c1216	5428	row 9
+c1217	5429	row 8
+c1218	5430	row 7
+c1219	5431	row 6
+c1220	5432	row 5
+c1221	5433	row 4
+c1222	5434	row 3
+c1223	5435	row 2
+c1224	5436	row 1
+c1225	5437	row 0
+c1226	5438	mask data char m two set
+c1227	5439	include char m two set
+c1228	5440	db 080h,006h
+c1229	5532	char two set
+c1230	5533	include char two set
+c1231	5534	db 080h,008h
+c1232	5664	include char four set
+c1233	5666	db 030h,005h
+c1234	5705	note
+c1235	5706	title one set
+c1236	5707	include title one set
+c1237	5708	db 0a0h,004h
+c1238	5789	title two set
+c1239	5790	include title two set
+c1240	5791	db 0a0h,004h
+c1241	5872	note
+c1242	5874	include clear one set
+c1243	5875	db 0a0h,004h
+c1244	5957	include clear two set
+c1245	5958	db 0a0h,004h
+c1246	6056	note
+c1247	6062	note
+c1248	6063	row 01234567890123456789012345678
+c1249	6069	row 123456
+c1250	6078	note
+c1251	6085	note
+c1252	6093	note
