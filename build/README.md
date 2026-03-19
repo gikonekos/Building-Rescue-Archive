@@ -9,10 +9,10 @@ This directory contains reconstructed build outputs and verification data for th
 - Enable reproducible builds and byte-level verification
 
 ## Structure
-
+```
 build/
   └─ xasm140/ - XASM 1.40 reference and reconstruction files
-
+```
 ## Role in this Project
 
 This directory is used to:
