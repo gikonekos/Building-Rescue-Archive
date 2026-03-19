@@ -109,6 +109,18 @@ https://youtu.be/i-AIbPmVMRU?si=nEv5tjyE0GfvfhcW
 
 ---
 
+## Documentation
+
+### Manual
+- docs/BR110-manual_ja.md — Japanese
+- docs/BR110-manual_en.md — English
+
+### Info
+- docs/BR-inf_ja.md — Japanese
+- docs/BR-inf_en.md — English
+
+---
+
 # Credits
 
 **Kenkichi Motoi**
